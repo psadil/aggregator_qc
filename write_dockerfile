@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker run --rm repronim/neurodocker:0.7.0 generate docker \
+  --base nipreps/mriqc:0.16.1 -p apt \
+  --miniconda use_env=base \
+    conda_install="python=3.10 numpy pandas atlassian-python-api " \
+  > Dockerfile
