@@ -13,4 +13,5 @@ FROM poldracklab/mriqc:0.15.1
 RUN conda install -y -q -c conda-forge -c plotly --name base \
            "atlassian-python-api" \
            "plotly" \
+           "openpyxl" \
     && sync && conda clean -y --all && sync
