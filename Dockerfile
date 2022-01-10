@@ -8,11 +8,11 @@
 # 
 #     https://github.com/ReproNim/neurodocker
 
-FROM poldracklab/mriqc:0.15.1
+FROM nipreps/mriqc:21.0.0rc2
 
-RUN conda install -y -q -c conda-forge -c plotly --name base \
+RUN conda install -y -q -c conda-forge -c plotly -c anaconda \
            "atlassian-python-api" \
            "plotly" \
            "openpyxl" \
-           "pandas" \
+           "pandas=1.3.5" \
     && sync && conda clean -y --all && sync
