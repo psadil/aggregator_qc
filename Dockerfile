@@ -14,4 +14,5 @@ RUN conda install -y -q -c conda-forge -c plotly --name base \
            "atlassian-python-api" \
            "plotly" \
            "openpyxl" \
+           "pandas" \
     && sync && conda clean -y --all && sync
